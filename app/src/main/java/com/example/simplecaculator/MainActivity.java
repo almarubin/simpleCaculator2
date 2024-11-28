@@ -13,13 +13,18 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    EditText et1 = findViewById(R.id.Num1);
-    String et1Text = et1.getText().toString();
-    Integer num1 = Integer.valueOf(et1Text);
+    EditText et1;
+    String et1Text;
+    Integer num1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        et1 = findViewById(R.id.Num1);
+        et1Text = et1.getText().toString();
+        num1 = Integer.valueOf(et1Text);
+
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -32,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBtnClick(View view) {
         Integer result = null;
-        Integer num2  = 0;
+        Integer num2  = Integer.valueOf(et1Text);
+        Integer num1  = Integer.valueOf(et1Text);
+
         if (view.getId() == R.id.btnPlus)
             result = num1 + num2;
         if (view.getId() == R.id.btnMin)
