@@ -3,6 +3,9 @@ package com.example.simplecaculator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -29,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBtnClick(View view) {
         Integer result = null;
+        Integer num2  = 0;
         if (view.getId() == R.id.btnPlus)
             result = num1 + num2;
-        if (view.getId() == R.id.btnMinus)
+        if (view.getId() == R.id.btnMin)
             result = num1 - num2;
         if (view.getId() == R.id.btnMult)
             result = num1 * num2;
