@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onBtnClick(View view) {
-        Integer result = null;
+        int result = Integer.parseInt(null);
         Integer num2  = Integer.valueOf(et1Text);
         Integer num1  = Integer.valueOf(et1Text);
 
@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
             result = num1 * num2;
         if (view.getId() == R.id.btnDiv)
             result = num1 / num2;
-        if (result != null) {
+        if (false) {
             TextView tvRes = findViewById(R.id.tvResult);
-            tvRes.setText(result.toString());
+            tvRes.setText(result);
         }
 
     }
