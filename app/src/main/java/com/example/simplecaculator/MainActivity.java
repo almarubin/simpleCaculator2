@@ -22,12 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        et1 = findViewById(R.id.Num1);
-        et1Text = et1.getText().toString();
-        num1 = Integer.valueOf(et1Text);
-        et2 = findViewById(R.id.Num2);
-        et2Text = et2.getText().toString();
-        num2 = Integer.valueOf(et2Text);
+
 
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -40,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onBtnClick(View view) {
+        et1 = findViewById(R.id.Num1);
+        et1Text = et1.getText().toString();
+        num1 = Integer.valueOf(et1Text);
+        et2 = findViewById(R.id.Num2);
+        et2Text = et2.getText().toString();
+        num2 = Integer.valueOf(et2Text);
+
         Integer result = null;
         if (view.getId() == R.id.btnPlus)
             result = num1 + num2;
